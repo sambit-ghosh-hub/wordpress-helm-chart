@@ -1,0 +1,16 @@
+wordpress:
+  replicas: 1
+  strategy_type : Recreate
+  image: wordpress
+
+mysql:
+  replicas: 1
+  strategy_type : Recreate
+  image: mysql
+  PASSWORD: password
+  DATABASE: wordpress
+  USER: wordpress
+
+nginx:
+  replicas: 1
+  image: nginx
